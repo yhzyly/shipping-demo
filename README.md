@@ -34,7 +34,7 @@
 - 见 OrderingController
 
 ### 测试报告
-- **测试报告详情链接：**[apifox-reports](./apifox-reports-2023-05-01-01-29-12.html
+- **测试报告详情链接：**[apifox-reports](./apifox-reports-2023-05-01-01-29-12.html)
 - ![pic/测试报告-restful.png](./pic/测试报告-restful.png)
 - <img src="./pic/测试报告-restful.png">
 
