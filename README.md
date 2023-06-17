@@ -1,40 +1,42 @@
-# 物流管理系统个人作业
-## 作业1：航运和运输 Web 服务 API 开发---Restful API
-```markdown
-在此作业中，系统会要求您为运输订购服务开发 Restful 服务 API。
-要求：
-	1，您的API需要涵盖托运人运送货物的基本要求。通常
-		创建托运人帐户
-		创建运输订单
-		检索不同货件的承运人账单
-		跟踪货物和运输
-	2，使用工具进行Restful API设计，例如swagger-gen（https://swagger.io/）ApiFox（https://www.apifox.com/），ApiPost7（https://www.apipost.cn/）。
-	3，每个服务的 URI 版本控制和 JSON/XML 有效负载。
-	4、API密钥和附加认证是可选的。
+## spring boot + sping mvc + jpa/batis + mysql + jwt +vue
 
-交货：
- 	1，您需要将项目源代码以及运行和测试屏幕捕获存档到 github 存储库。
-	2、提供系统设计报告是必要的。
-	3、交期2023-4-30
-```
-- 代码结构快速一览
-	- ![pic/代码结构-restful.png](pic/代码结构-restful.png)
-	- <img src="./pic/代码结构-restful.png">
+---
 
-### 1 创建托运人帐户---/user/save
-- 见 UserController
+### Token验证流程
 
-### 2 创建运输订单---/ordering/save
-- 见 OrderingController
+1.从Request Header 取出Token
 
-### 3 检索不同货件的承运人账单---/ordering/listCarrier/{carrier}
-- 见 OrderingController
+2.判断JWT Token是否过期
 
-### 4 跟踪货物和运输---/ordering/listId/{id}
-- 见 OrderingController
+3.解析token
 
-### 测试报告
-- **测试报告详情链接：**[apifox-reports](./apifox-reports-2023-05-01-01-29-12.html)
-- ![pic/测试报告-restful.png](./pic/测试报告-restful.png)
-- <img src="./pic/测试报告-restful.png">
+4.向SpringSecurity的Context中加入认证信息
 
+![img1.jpg](img1.jpg)
+
+---
+
+### 测试
+- 没有tocken就没有访问权限
+
+![img.png](/img/img.png)
+
+- 模拟登录
+
+![img_1.png](/img/img_1.png)
+
+- 对应前端登录
+
+![img_3.png](/img/img_3.png)
+
+- 成功登录返回token
+
+![img_2.png](/img/img_2.png)
+
+- 将token加入header后便可访问api，前端直接封装
+
+![img_4.png](/img/img_4.png)
+
+- 权限控制定义使用Role相关字段
+
+![img_5.png](/img/img_5.png)
