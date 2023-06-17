@@ -12,7 +12,7 @@
 
 4.向SpringSecurity的Context中加入认证信息
 
-![img1.jpg](img1.jpg)
+![img1.jpg](/img/img1.jpg)
 
 ---
 
